@@ -2,19 +2,28 @@
 ### Dashboard
 
 ```bash
-Instalacion en Debian de NodeJS (como root)
 
-apt-get install curl
-curl --silent --location https://deb.nodesource.com/setup_0.12 | bash -
-apt-get install --yes nodejs
-apt-get install --yes build-essential
+Instalamos Git
+sudo yum install git
 
-Actualizamos Npm
+Instalacion en Debian de NodeJS (como root) y NPM
+
+sudo yum install gcc gcc-c++
+sudo yum install epel-release
+sudo yum install nodejs
+sudo yum install npm
+
+Actualizamos NPM
 npm install npm -g
 
-Instalamos Dependencias
-cd webapp-dashboard && npm install
+Instalamos Forever para correr App en background
 npm install -g forever
+
+Clonamos Repositorio
+git clone http://git.gcba.gob.ar/labgcba/webapp-dashboardcivico.git
+
+Instalamos Dependencias de App
+cd webapp-dashboardcivico && npm install
 
 Exportamos variables de Entorno
 
@@ -30,15 +39,18 @@ export VM_EXTREDIS_DB_PORT=""
 export VM_EXTREDIS_DB_NAME=""
 export VM_EXTREDIS_DB_PASSWORD=""
 
-Iniciar server
-forever start server.js
+Iniciamos Server.js
+forever --pidFile /directorio/log/webappdashboard.pid -a -l /directorio/log/webappdashboard.log start server.js
 
-Ver estado de app y ruta del archivo de Logs
+Ver estado de App
 forever list
 
-Detener
+Ver logs
+tail -f /directorio/log/webappdashboard.log
+
+Detener App
 forever stop 0
 
-Reiniciar
+Reiniciar App
 forever restart 0
 ```
