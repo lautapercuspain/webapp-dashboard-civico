@@ -24,7 +24,7 @@ var config = [
             "/distancias",
             "/horalugar",
             "/trafico_avIndep",
-            "/co2",
+            "/co",
             "/climainterno",
             "/ausatrafico"
         ]

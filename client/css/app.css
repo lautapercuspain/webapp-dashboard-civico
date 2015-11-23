@@ -168,13 +168,25 @@ html {
       width: 70%; }
     #tablero .columna #calidadAire .etiqueta {
       font-size: 1em; }
-    #tablero .columna #calidadAire #co2 {
+    #tablero .columna #calidadAire #co {
       line-height: 0.8em;
       font-size: 10em; }
-      #tablero .columna #calidadAire #co2 .sup {
+      #tablero .columna #calidadAire #co .sup {
         font-size: 0.2em;
         position: relative;
         top: -90px; }
+    #tablero .columna #calidadAire .etiquetaTipoDeDato {
+      opacity: 0.8;
+      line-height: 1.2em;
+      font-size: 0.16em;
+      position: relative;
+      float: right;
+      right: 10%;
+      top: 25px;
+      color: #ffffff; }
+      #tablero .columna #calidadAire .etiquetaTipoDeDato .label {
+        color: #000000;
+        background-color: #ffffff; }
     #tablero .columna #subtesChico .etiqueta {
       font-size: 1em; }
     #tablero .columna #subtesChico .estado-subte {

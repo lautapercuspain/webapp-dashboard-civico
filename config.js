@@ -12,13 +12,13 @@ module.exports = {
 	}, "routes" : [
     {
       "name": "main",
-      "path": "/",
+      "path": "/dashboardcivico",
       "widgets": ["consumoenergetico",
                   "clima",
                   "subtes",
                   "distancias",
                   "trafico_avIndep",
-                  "co2",
+                  "co",
                   "ausatrafico",
                   "climainterno"],
       "view" : "app.html",

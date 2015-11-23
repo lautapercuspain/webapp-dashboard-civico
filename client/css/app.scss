@@ -234,7 +234,7 @@ html {
             .etiqueta{
                     font-size: 1em;
             }
-            #co2{
+            #co{
                 line-height: 0.8em;
                 font-size: 10em;
 
@@ -242,6 +242,20 @@ html {
                     font-size: 0.2em;
                     position: relative;
                     top: -90px;
+                }
+            }
+            .etiquetaTipoDeDato{
+                opacity: $opacidad-labels;                
+                line-height: 1.2em;
+                font-size: 0.16em;
+                position: relative;
+                float: right;
+                right: 10%;
+                top: 25px;
+                color: $color-blanco;
+                .label{
+                    color: $color-negro;
+                    background-color: $color-blanco;
                 }
             }
         }

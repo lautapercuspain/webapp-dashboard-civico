@@ -6,9 +6,9 @@ if (config["auth"])
 
 exports.actions = function(req, res, ss) {
   return {
-    getCo2 : function(){
-      client.hgetall('co2', function(err, object) {
-        ss.publish.all('co2', object["co2"])
+    getCo : function(){
+      client.hgetall('co', function(err, object) {
+        ss.publish.all('co', object["co"])
       });      
     }
   }
